@@ -1,0 +1,14 @@
+Started: 2026-11-10T14:37:51.621549+07:00
+Command: C:\Users\VINUNI\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\python.exe test_lab.py 3
+
+test_expected_notification_failure_logs_a_warning (__main__.TestExercise3.test_expected_notification_failure_logs_a_warning) ... ok
+test_notification_failure_keeps_assignment_and_attempts_once (__main__.TestExercise3.test_notification_failure_keeps_assignment_and_attempts_once) ... notification failed for task t1
+ok
+test_unexpected_provider_bug_remains_visible_after_save (__main__.TestExercise3.test_unexpected_provider_bug_remains_visible_after_save) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
+Exit code: 0

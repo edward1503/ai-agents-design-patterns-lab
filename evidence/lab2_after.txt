@@ -1,0 +1,13 @@
+Started: 2026-11-10T14:37:33.632138+07:00
+Command: C:\Users\VINUNI\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\python.exe test_lab.py 2
+
+test_push_channel_records_each_request (__main__.TestExercise2.test_push_channel_records_each_request) ... ok
+test_push_works_through_the_same_task_service (__main__.TestExercise2.test_push_works_through_the_same_task_service) ... ok
+test_sms_is_selected_from_the_assignee_preference (__main__.TestExercise2.test_sms_is_selected_from_the_assignee_preference) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+Exit code: 0

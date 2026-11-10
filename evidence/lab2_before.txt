@@ -1,0 +1,39 @@
+Started: 2026-11-10T14:37:24.362166+07:00
+Command: C:\Users\VINUNI\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\python.exe test_lab.py 2
+
+test_push_channel_records_each_request (__main__.TestExercise2.test_push_channel_records_each_request) ... ERROR
+test_push_works_through_the_same_task_service (__main__.TestExercise2.test_push_works_through_the_same_task_service) ... notification failed for task t1
+FAIL
+test_sms_is_selected_from_the_assignee_preference (__main__.TestExercise2.test_sms_is_selected_from_the_assignee_preference) ... ok
+
+======================================================================
+ERROR: test_push_channel_records_each_request (__main__.TestExercise2.test_push_channel_records_each_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\VINUNI\Downloads\Lab 3\test_lab.py", line 57, in test_push_channel_records_each_request
+    push.send('device-1', 'first')
+  File "C:\Users\VINUNI\Downloads\Lab 3\push_channel.py", line 10, in send
+    raise NotImplementedError('Complete exercise 2')
+NotImplementedError: Complete exercise 2
+
+======================================================================
+FAIL: test_push_works_through_the_same_task_service (__main__.TestExercise2.test_push_works_through_the_same_task_service)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\VINUNI\Downloads\Lab 3\test_lab.py", line 67, in test_push_works_through_the_same_task_service
+    self.assertEqual(push.sent, [('device-3', MESSAGE)])
+AssertionError: Lists differ: [] != [('device-3', 'You were assigned: Write report')]
+
+Second list contains 1 additional elements.
+First extra element 0:
+('device-3', 'You were assigned: Write report')
+
+- []
++ [('device-3', 'You were assigned: Write report')]
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1, errors=1)
+
+Exit code: 1

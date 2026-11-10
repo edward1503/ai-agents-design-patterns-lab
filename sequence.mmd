@@ -1,0 +1,32 @@
+sequenceDiagram
+    participant Caller
+    participant Service as TaskService
+    participant Repository as TaskRepository
+    participant Channel as NotificationChannel
+    Caller->>Service: assign_task(task_id, assignee)
+    Service->>Service: Select injected channel by preferred_channel
+    Service->>Repository: get(task_id)
+    Repository-->>Service: task
+    Service->>Service: replace(task, assignee_id=assignee.id)
+    Service->>Repository: save(assigned)
+    Note over Repository: Successful save models a completed commit
+    alt SaveError
+        Repository-->>Service: raise SaveError
+        Note over Service,Channel: No send attempt; persisted task unchanged
+        Service-->>Caller: propagate SaveError
+    else Save succeeds
+        Repository-->>Service: None (committed)
+        Service->>Channel: send(contact, "You were assigned: " + assigned.title)
+        alt Delivery accepted
+            Channel-->>Service: None
+            Service-->>Caller: assigned task
+        else NotificationError
+            Channel-->>Service: raise NotificationError
+            Service->>Service: Log warning with task ID, without contact
+            Note over Service,Channel: Assignment retained; no retry
+            Service-->>Caller: assigned task (normal return)
+        else Unexpected programming error
+            Channel-->>Service: raise RuntimeError (example)
+            Service-->>Caller: propagate unexpected error
+        end
+    end

@@ -1,0 +1,33 @@
+--- before/service.py
++++ after/service.py
+@@ -31,11 +31,11 @@
+         channel = self._channels[assignee.preferred_channel]
+         task = self._repository.get(task_id)
+         assigned = replace(task, assignee_id=assignee.id)
+-        # Review this interaction against R1-R4 before accepting the design.
++        # Commit the assignment before attempting notification delivery.
+         self._repository.save(assigned)
+         try:
+             channel.send(assignee.contact,
+                          f'You were assigned: {assigned.title}')
+-        except Exception:
++        except NotificationError:
+             logger.warning('notification failed for task %s', assigned.id)
+         return assigned
+--- before/push_channel.py
++++ after/push_channel.py
+@@ -7,4 +7,4 @@
+     def send(self, recipient: str, message: str) -> None:
+         # Record the accepted request as a (recipient, message) tuple.
+         # This is a local simulation; do not call a real push provider.
+-        raise NotImplementedError('Complete exercise 2')
++        self.sent.append((recipient, message))
+--- before/audit_channel.py
++++ after/audit_channel.py
+@@ -10,4 +10,5 @@
+     def send(self, recipient: str, message: str) -> None:
+         # Delegate once. Only after success, append 'notification.accepted'.
+         # Propagate any delegate exception; record no event on failure.
+-        raise NotImplementedError('Complete Lab 4')
++        self._channel.send(recipient, message)
++        self.events.append('notification.accepted')

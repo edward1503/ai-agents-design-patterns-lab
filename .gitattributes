@@ -1,0 +1,2 @@
+# Preserve original file bytes so the recorded SHA-256 evidence stays valid.
+* -text

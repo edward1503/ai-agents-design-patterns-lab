@@ -1,0 +1,13 @@
+Started: 2026-11-10T14:38:07.786123+07:00
+Command: C:\Users\VINUNI\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\python.exe test_lab.py 4
+
+test_decorator_is_injected_without_changing_task_service (__main__.TestExercise4.test_decorator_is_injected_without_changing_task_service) ... ok
+test_delegate_failure_propagates_without_an_acceptance_record (__main__.TestExercise4.test_delegate_failure_propagates_without_an_acceptance_record) ... ok
+test_delegates_once_and_records_each_accepted_request (__main__.TestExercise4.test_delegates_once_and_records_each_accepted_request) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+Exit code: 0

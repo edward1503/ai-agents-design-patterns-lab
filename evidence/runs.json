@@ -1,0 +1,44 @@
+[
+  {
+    "label": "lab2_before",
+    "started_at": "2026-11-10T14:37:24.362166+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py 2",
+    "exit_code": 1
+  },
+  {
+    "label": "lab2_after",
+    "started_at": "2026-11-10T14:37:33.632138+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py 2",
+    "exit_code": 0
+  },
+  {
+    "label": "lab3_before",
+    "started_at": "2026-11-10T14:37:39.671458+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py 3",
+    "exit_code": 1
+  },
+  {
+    "label": "lab3_after",
+    "started_at": "2026-11-10T14:37:51.621549+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py 3",
+    "exit_code": 0
+  },
+  {
+    "label": "lab4_before",
+    "started_at": "2026-11-10T14:37:56.000044+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py 4",
+    "exit_code": 1
+  },
+  {
+    "label": "lab4_after",
+    "started_at": "2026-11-10T14:38:07.786123+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py 4",
+    "exit_code": 0
+  },
+  {
+    "label": "all_final",
+    "started_at": "2026-11-10T14:39:13.345361+07:00",
+    "command": "C:\\Users\\VINUNI\\AppData\\Roaming\\uv\\python\\cpython-3.12.16-windows-x86_64-none\\python.exe test_lab.py all",
+    "exit_code": 0
+  }
+]

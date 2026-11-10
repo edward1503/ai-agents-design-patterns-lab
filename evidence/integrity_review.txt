@@ -1,0 +1,20 @@
+Integrity and design review
+
+UNCHANGED: README.md (SHA-256 matched)
+UNCHANGED: AGENTS.md (SHA-256 matched)
+UNCHANGED: test_lab.py (SHA-256 matched)
+UNCHANGED: models.py (SHA-256 matched)
+UNCHANGED: adapters.py (SHA-256 matched)
+lab2: only push_channel.py changed
+lab3: only service.py changed
+lab4: only audit_channel.py changed
+
+DECISIONS.md: 197 words (maximum 200).
+Manual code/test/sequence review:
+- Channel selection precedes get; assignment is saved before send.
+- Successful save is annotated as a completed commit.
+- SaveError propagates with zero send attempts and no stored change.
+- NotificationError logs task ID without contact; saved assignment returns normally; no retry.
+- Unexpected errors propagate after save.
+- R6 outbox design includes atomic task-plus-intent write, relay retries and duplicate risk.
+- Offline tests do not establish real durability, crash recovery or provider delivery.

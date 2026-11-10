@@ -1,0 +1,46 @@
+Started: 2026-11-10T14:37:56.000044+07:00
+Command: C:\Users\VINUNI\AppData\Roaming\uv\python\cpython-3.12.16-windows-x86_64-none\python.exe test_lab.py 4
+
+test_decorator_is_injected_without_changing_task_service (__main__.TestExercise4.test_decorator_is_injected_without_changing_task_service) ... ERROR
+test_delegate_failure_propagates_without_an_acceptance_record (__main__.TestExercise4.test_delegate_failure_propagates_without_an_acceptance_record) ... ERROR
+test_delegates_once_and_records_each_accepted_request (__main__.TestExercise4.test_delegates_once_and_records_each_accepted_request) ... ERROR
+
+======================================================================
+ERROR: test_decorator_is_injected_without_changing_task_service (__main__.TestExercise4.test_decorator_is_injected_without_changing_task_service)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\VINUNI\Downloads\Lab 3\test_lab.py", line 127, in test_decorator_is_injected_without_changing_task_service
+    task = service.assign_task('t1', Assignee('u3', 'push', 'device-3'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\VINUNI\Downloads\Lab 3\service.py", line 37, in assign_task
+    channel.send(assignee.contact,
+  File "C:\Users\VINUNI\Downloads\Lab 3\audit_channel.py", line 13, in send
+    raise NotImplementedError('Complete Lab 4')
+NotImplementedError: Complete Lab 4
+
+======================================================================
+ERROR: test_delegate_failure_propagates_without_an_acceptance_record (__main__.TestExercise4.test_delegate_failure_propagates_without_an_acceptance_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\VINUNI\Downloads\Lab 3\test_lab.py", line 118, in test_delegate_failure_propagates_without_an_acceptance_record
+    audited.send('device-1', 'first')
+  File "C:\Users\VINUNI\Downloads\Lab 3\audit_channel.py", line 13, in send
+    raise NotImplementedError('Complete Lab 4')
+NotImplementedError: Complete Lab 4
+
+======================================================================
+ERROR: test_delegates_once_and_records_each_accepted_request (__main__.TestExercise4.test_delegates_once_and_records_each_accepted_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\VINUNI\Downloads\Lab 3\test_lab.py", line 106, in test_delegates_once_and_records_each_accepted_request
+    audited.send('device-1', 'first')
+  File "C:\Users\VINUNI\Downloads\Lab 3\audit_channel.py", line 13, in send
+    raise NotImplementedError('Complete Lab 4')
+NotImplementedError: Complete Lab 4
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)
+
+Exit code: 1
